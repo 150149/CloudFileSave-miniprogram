@@ -1,0 +1,40 @@
+<!--pages/user/user.wxml-->
+<view style="height:120rpx " class="bg-blue padding radius text-center shadow-blur">
+<cu-custom bgColor="bg-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+</cu-custom>
+</view>
+
+
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+	<view class="action">
+		<text class="cuIcon-title text-orange "></text> 文件列表
+	</view>
+
+	<view class="action">
+  <button bindtap="delfold" class="cu-btn round bg-red shadow">删除文件夹</button>
+
+		<button style="width:220rpx; padding:0rpx 0rpx" bindtap="upload" class="cu-btn round bg-green shadow">
+			<text class="cuIcon-upload"></text> 上传</button>
+	</view>
+
+</view>
+
+
+
+<view class="cu-list menu-avatar">
+	<view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{files}}" wx:key="{{_id}}" bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
+		<view class="cu-avatar round lg" style="background-image:url({{item.type}});"></view>
+		<view class="content">
+		<navigator url="../detail/detail?id={{_openid}}&fileid={{item.image}}">
+			<view class="text-grey">{{item.name}}</view></navigator>
+
+		</view>
+		<view class="action">
+		</view>
+		<view class="move">
+			<view class="bg-red"><navigator url="../delete/delete?id={{_openid}}&delid={{item.image}}">删除</navigator></view>
+		</view>
+	</view>
+</view>

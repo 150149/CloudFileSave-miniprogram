@@ -1,0 +1,17 @@
+  <view class="padding-sm" style="padding: 0rpx 0rpx">
+    <view class="bg-img bg-mask padding-tb-xl" style="background-image: url('http://m.qpic.cn/psc?/V129kKld2rbPxR/ruAMsa53pVQWN7FLK88i5tRnqDwwgsQfE5XKlB5dsCYXFMvJV98KRRc1AK19C8nH8zr9zPWGhzwt*LHM8G5rQtGxDfyg65i9F3cbNHl3Hik!/b&bo=gAfpAwAAAAADB08!&rf=viewer_4');height: 100vh;width:100vw">
+
+    <view style="padding:400rpx 280rpx">
+      <view class="cu-avatar xl round margin-left" style="background-image:url('http://m.qpic.cn/psc?/V129kKld2rbPxR/45NBuzDIW489QBoVep5mcX47eynxymonkpTpE0b9nyFwt7ujvYyVyu4pU.YqtRjoXppCrMlZxCXoZld6MnReYZs0Md38dOgWeV3crC.T7T0!/b&bo=OAQ4BAAAAAABFzA!&rf=viewer_4');"></view>
+      <view style="width:300rpx; padding:30rpx 20rpx">
+      <view style="padding:30rpx 0rpx" class="padding-xl text-white">次元乌托邦</view>
+      <view style="padding:0rpx 15rpx" class="padding-xl text-white">云端服务</view>
+      </view><button 
+      class="cu-btn round line-green" 
+      open-type="getUserInfo"
+      bindgetuserinfo="getUserInfo"
+      >授权进入</button></view>
+
+      
+    </view>
+  </view>

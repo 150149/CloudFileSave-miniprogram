@@ -1,0 +1,64 @@
+<!--pages/user/user.wxml-->
+<view style="height:120rpx " class="bg-blue padding radius text-center shadow-blur"></view>
+<view class="cu-bar bg-white solid-bottom margin-top">
+	<view class="action">
+		<text class="cuIcon-title text-orange "></text> 文件夹列表
+	</view>
+
+	<view class="action">
+		<button bindtap="newfold" class="cu-btn round bg-green shadow">
+			<text class="cuIcon-upload"></text> 新建</button>
+	</view>
+
+</view>
+
+<view class="cu-list menu-avatar">
+	<view  class="cu-item {{modalName=='move-box-'+ index2?'move-cur':''}}" wx:for="{{folders}}" wx:key="{{folders}}"  data-target="move-box-{{index}}">
+		<view  class="cu-avatar round lg" style="background-image:url(http://m.qpic.cn/psc?/V129kKld2rbPxR/ruAMsa53pVQWN7FLK88i5j.H.TQm2.Baoo3ooINKmmA0ZyKeqPlQJmXJfTrL2lppuxoDLioYI7fnUicRQyxB7uzXuoicVOQP*9nzvtZYKH0!/b&bo=wADAAAAAAAADByI!&rf=viewer_4);"></view>
+		
+		<view class="content">
+		<navigator url="../fold/fold?id={{_openid}}&foldname={{item}}">
+			<view class="text-grey">{{item}}</view>
+</navigator>
+		</view>		
+		<view class="action">
+		</view>
+		<view class="move">
+			<view class="bg-red">删除</view>
+		</view>
+
+	</view>
+</view>
+
+
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+	<view class="action">
+		<text class="cuIcon-title text-orange "></text> 文件列表
+	</view>
+
+	<view class="action">
+		<button bindtap="upload" class="cu-btn round bg-green shadow">
+			<text class="cuIcon-upload"></text> 上传</button>
+	</view>
+
+</view>
+
+
+
+<view class="cu-list menu-avatar">
+	<view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{files}}" wx:key="{{_id}}" bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
+
+		<view class="cu-avatar round lg" style="background-image:url({{item.type}});"></view>
+			
+		<view class="content">
+		<navigator url="../detail/detail?id={{_openid}}&fileid={{item.image}}">
+			<view class="text-grey">{{item.name}}</view></navigator>
+		</view>
+		<view class="action">
+		</view>
+		<view class="move">
+			<view class="bg-red"><navigator url="../delete/delete?id={{_openid}}&delid={{item.image}}">删除</navigator></view>
+		</view>
+	</view>
+</view>

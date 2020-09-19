@@ -1,0 +1,36 @@
+<!--pages/detail/detail.wxml-->
+<view style="height:120rpx " class="bg-blue padding radius text-center shadow-blur">
+<cu-custom bgColor="bg-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+</cu-custom>
+</view>
+<image src="{{image}}" style="width:750rpx;"></image>
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+	<view class="action">
+		<text class="cuIcon-title text-orange "></text> 文件名
+	</view>
+
+			<button style="width:150rpx" bindtap="download" class="cu-btn round bg-green shadow">下载</button>
+</view>
+<view class="cu-form-group">
+	<input bindinput="name" placeholder="{{data.name}}"></input>
+</view>
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+	<view class="action">
+		<text class="cuIcon-title text-blue "></text> 所在文件夹: {{data.folder}} 
+	</view>
+</view>
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+	<view class="action">
+		<text class="cuIcon-title text-green "></text> 文件ID: {{data._id}} 
+	</view>
+</view>
+
+<view style="padding:30rpx 0rpx" class="margin-tb-sm text-center" >
+    <button bindtap="newfold" style="width:700rpx" class="cu-btn round bg-red lg"><navigator url="../delete/delete?id={{_openid}}&delid={{image}}">删除</navigator></button>
+  </view>
+
+

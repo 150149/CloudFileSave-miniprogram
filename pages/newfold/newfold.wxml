@@ -1,0 +1,20 @@
+
+    <view class="bg-img bg-mask padding-tb-xl" style="background-image: url('http://m.qpic.cn/psc?/V129kKld2rbPxR/ruAMsa53pVQWN7FLK88i5tRnqDwwgsQfE5XKlB5dsCYXFMvJV98KRRc1AK19C8nH8zr9zPWGhzwt*LHM8G5rQtGxDfyg65i9F3cbNHl3Hik!/b&bo=gAfpAwAAAAADB08!&rf=viewer_4');height: 500rpx;width:100vw"></view>
+
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+	<view class="action">
+		<text class="cuIcon-title text-orange "></text> 请在下方输入要新建文件夹的名字
+	</view>
+</view>
+
+<view class="cu-form-group">
+	<input bindinput="name" placeholder=""></input>
+</view>
+
+<view style="padding:30rpx 0rpx" class="margin-tb-sm text-center" >
+    <button bindtap="newfold" style="width:600rpx" class="cu-btn round bg-green lg">确认</button>
+  </view>
+  <view style="padding:30rpx 0rpx" class="margin-tb-sm text-center" >
+    <button bindtap="back" style="width:600rpx" class="cu-btn round bg-blue lg">取消</button>
+  </view>
