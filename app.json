@@ -1,0 +1,21 @@
+{
+  "pages": [
+
+    "pages/login/login",
+    "pages/user/user",
+    "pages/newfold/newfold",
+    "pages/fold/fold",
+    "pages/delete/delete",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "Color UI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap21.json"
+}
